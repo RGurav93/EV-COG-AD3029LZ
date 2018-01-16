@@ -1,0 +1,938 @@
+###############################################################################
+#
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                27/Nov/2017  16:27:55
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Exe\sd_card_example.out
+#    Map file     =  
+#        C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\List\sd_card_example.map
+#    Command line =  
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\adi_dma.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\adi_gpio.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\adi_i2c.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\adi_pwr.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\adi_rtc.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\adi_spi.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\adi_uart.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\adi_wdt.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\ADT7420.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\common.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\diskio.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\ff.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\main.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\PinMux.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\sd.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\sdcard_spi_hal.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\startup_ADuCM3029.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\system_ADuCM3029.o"
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj\time_stamp.o"
+#        -o "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Exe\sd_card_example.out"
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map
+#        "C:\Analog
+#        Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\List\sd_card_example.map"
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\config\linker\AnalogDevices\ADuCM3029.icf" --semihosting
+#        --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor                     = *
+__Heap_Handler                = Basic
+__SystemLibrary               = DLib
+__dlib_dynamic_initialization = normal
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A3":  place at 0x00000180 { ro section .security_options };
+"A4":  place at 0x000007fc { block CHECKSUM };
+"A5":  place at start of [0x00000000-0x0000017f] { ro section .intvec };
+"P2":  place in [from 0x00000800 to 0x0003ffff] { ro };
+"A6":  place at end of [0x20000000-0x20001fff] { block CSTACK };
+"P3":  place in [from 0x20000000 to 0x20001fff] { rw, block HEAP };
+initialize by copy { rw };
+
+  Section              Kind        Address    Size  Object
+  -------              ----        -------    ----  ------
+"A5":                                        0x140
+  .intvec              ro code  0x00000000   0x140  startup_ADuCM3029.o [1]
+                              - 0x00000140   0x140
+
+"A3":                                         0x20
+  .security_options    const    0x00000180    0x20  system_ADuCM3029.o [1]
+                              - 0x000001a0    0x20
+
+"A4":                                          0x4
+  CHECKSUM                      0x000007fc     0x4  <Block>
+    CHECKSUM           uninit   0x000007fc     0x4  <Block tail>
+                              - 0x00000800     0x4
+
+"P2":                                       0xa51f
+  .text                ro code  0x00000800  0x1a72  ff.o [1]
+  .text                ro code  0x00002272    0x1e  xsscin.o [3]
+  .text                ro code  0x00002290    0x8e  diskio.o [1]
+  .text                ro code  0x0000231e     0xa  xsprout.o [3]
+  .text                ro code  0x00002328   0x638  sd.o [1]
+  .text                ro code  0x00002960   0x1a0  sdcard_spi_hal.o [1]
+  .text                ro code  0x00002b00    0x30  I32ToDbl.o [4]
+  .text                ro code  0x00002b30   0x848  pow.o [4]
+  .text                ro code  0x00003378    0x58  DblToI32.o [4]
+  .text                ro code  0x000033d0    0x76  ABImemcpy_unaligned.o [5]
+  .rodata              const    0x00003446     0x2  sd.o [1]
+  .text                ro code  0x00003448   0x178  adi_gpio.o [1]
+  .text                ro code  0x000035c0   0x7dc  adi_spi.o [1]
+  .text                ro code  0x00003d9c    0x44  xdnorm.o [4]
+  .text                ro code  0x00003de0    0x7a  xdint.o [4]
+  .text                ro code  0x00003e5c    0x20  DblCmpEq.o [4]
+  .text                ro code  0x00003e7c     0xc  errno.o [3]
+  .text                ro code  0x00003e88    0x2e  DblCmpGe.o [4]
+  .text                ro code  0x00003eb8    0x2e  DblCmpLe.o [4]
+  .text                ro code  0x00003ee8   0x1a2  DblMul.o [4]
+  .text                ro code  0x0000408c    0xe8  DblAdd.o [4]
+  .text                ro code  0x00004174   0x180  DblSub.o [4]
+  .text                ro code  0x000042f4   0x256  DblDiv.o [4]
+  .text                ro code  0x0000454c    0xac  xlog.o [4]
+  .text                ro code  0x000045f8   0x2bc  xexp.o [4]
+  .text                ro code  0x000048b4    0x66  ABImemset.o [5]
+  .text                ro code  0x0000491c   0x184  adi_dma.o [1]
+  .text                ro code  0x00004aa0   0x4dc  adi_pwr.o [1]
+  .text                ro code  0x00004f7c     0x2  xtls.o [3]
+  .text                ro code  0x00004f7e    0x32  xdtest.o [4]
+  .text                ro code  0x00004fb0   0x10c  xdscale.o [4]
+  .text                ro code  0x000050bc   0x118  system_ADuCM3029.o [1]
+  .text                ro code  0x000051d4   0xdca  xprintffull.o [3]
+  .text                ro code  0x00005fa0    0x16  strchr.o [5]
+  .text                ro code  0x00005fb8    0x36  strlen.o [5]
+  .text                ro code  0x00005ff0    0x58  memchr.o [5]
+  .text                ro code  0x00006048    0xee  I64DivMod.o [5]
+  .text                ro code  0x00006136     0xe  div.o [3]
+  .text                ro code  0x00006144     0x2  I64DivZer.o [5]
+  .text                ro code  0x00006148   0xb7c  xscanffull.o [3]
+  .text                ro code  0x00006cc4    0xa4  xstoll.o [3]
+  .text                ro code  0x00006d68   0x1b4  xstoull.o [3]
+  .text                ro code  0x00006f1c   0x14c  xstold.o [4]
+  .text                ro code  0x00007068    0x90  DblToFlt.o [4]
+  .text                ro code  0x000070f8   0x11e  xstopfx.o [3]
+  .text                ro code  0x00007218   0x1ac  xstoflt.o [3]
+  .rodata              const    0x000073c4    0x64  time_stamp.o [1]
+  .text                ro code  0x00007428   0x200  xdtento.o [4]
+  .text                ro code  0x00007628   0x200  xstoxflt.o [3]
+  .text                ro code  0x00007828    0x52  xdunscal.o [4]
+  .text                ro code  0x0000787c   0x842  xgentime.o [3]
+  .text                ro code  0x000080be    0x42  xgettime.o [3]
+  .text                ro code  0x00008100    0x86  xstol.o [3]
+  .text                ro code  0x00008188     0xa  getzone.o [3]
+  .text                ro code  0x00008194   0x198  xstoul.o [3]
+  .text                ro code  0x0000832c   0x618  adi_rtc.o [1]
+  .text                ro code  0x00008944   0x5fc  adi_i2c.o [1]
+  .text                ro code  0x00008f40   0x58c  time_stamp.o [1]
+  .text                ro code  0x000094cc    0x34  sprintf.o [3]
+  .text                ro code  0x00009500    0x5c  common.o [1]
+  .text                ro code  0x0000955c     0x4  exit.o [3]
+  .text                ro code  0x00009560    0x12  time.o [6]
+  .text                ro code  0x00009572     0xe  ctime.o [3]
+  .text                ro code  0x00009580    0x24  sscanf.o [3]
+  .text                ro code  0x000095a4    0x2c  strncmp.o [3]
+  .text                ro code  0x000095d0    0x24  printf.o [3]
+  .text                ro code  0x000095f4     0xa  cexit.o [5]
+  .text                ro code  0x00009600    0xb6  localtim.o [3]
+  .text                ro code  0x000096b8    0x2c  asctime.o [3]
+  .text                ro code  0x000096e4    0x14  exit.o [6]
+  .text                ro code  0x000096f8    0x29  setlocale.o [3]
+  .text                ro code  0x00009724   0x188  xttotm.o [3]
+  .text                ro code  0x000098ac   0x180  xlocale_c.o [3]
+  .text                ro code  0x00009a2c    0xce  xstrftim.o [3]
+  .text                ro code  0x00009afc    0x6c  iarttio.o [6]
+  .text                ro code  0x00009b68   0x134  xisdst.o [3]
+  .text                ro code  0x00009c9c     0x8  XShttio.o [3]
+  .text                ro code  0x00009ca4   0x15e  xgetdst.o [3]
+  .text                ro code  0x00009e04    0x80  xxmemxfree.o [3]
+  .text                ro code  0x00009e84    0xb0  xxmemxmalloc.o [3]
+  .text                ro code  0x00009f34    0x2c  xgetmemchunk.o [3]
+  .text                ro code  0x00009f60   0x3f0  adi_uart.o [1]
+  .text                ro code  0x0000a350   0x19c  ADT7420.o [1]
+  .text                ro code  0x0000a4ec    0x44  FltToS32.o [4]
+  .text                ro code  0x0000a530    0x2e  I32ToFlt.o [4]
+  .text                ro code  0x0000a560    0xe6  FltSub.o [4]
+  .text                ro code  0x0000a648    0x4e  FltToDbl.o [4]
+  .text                ro code  0x0000a698    0x74  FltAdd.o [4]
+  .text                ro code  0x0000a70c    0xa4  main.o [1]
+  .text                ro code  0x0000a7b0    0x34  PinMux.o [1]
+  .text                ro code  0x0000a7e4    0x40  zero_init3.o [5]
+  .text                ro code  0x0000a824    0x38  packbits_init_single.o [5]
+  .rodata              const    0x0000a85c    0x30  time_stamp.o [1]
+  .text                ro code  0x0000a88c    0x28  putchar.o [3]
+  .text                ro code  0x0000a8b4    0x10  write.o [6]
+  .text                ro code  0x0000a8c4    0x1e  dwrite.o [6]
+  .text                ro code  0x0000a8e2    0x20  iarwstd.o [6]
+  .text                ro code  0x0000a902    0x22  iarwrite.o [6]
+  .text                ro code  0x0000a924    0x28  data_init.o [5]
+  .rodata              const    0x0000a94c    0x24  time_stamp.o [1]
+  .rodata              const    0x0000a970    0x24  time_stamp.o [1]
+  .rodata              const    0x0000a994    0x24  time_stamp.o [1]
+  .iar.init_table      const    0x0000a9b8    0x24  - Linker created -
+  .rodata              const    0x0000a9dc    0x20  time_stamp.o [1]
+  .rodata              const    0x0000a9fc    0x20  time_stamp.o [1]
+  .rodata              const    0x0000aa1c    0x20  time_stamp.o [1]
+  .text                ro code  0x0000aa3c    0x20  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000aa5c    0x20  cmain_call_ctors.o [5]
+  .text                ro code  0x0000aa7c    0x18  cppinit.o [3]
+  .rodata              const    0x0000aa94    0x1c  time_stamp.o [1]
+  .text                ro code  0x0000aab0    0x1a  cmain.o [5]
+  .text                ro code  0x0000aaca     0x4  low_level_init.o [3]
+  .rodata              const    0x0000aad0    0x18  time_stamp.o [1]
+  .rodata              const    0x0000aae8    0x18  time_stamp.o [1]
+  .text                ro code  0x0000ab00    0x16  xprout.o [3]
+  .rodata              const    0x0000ab18    0x14  main.o [1]
+  .rodata              const    0x0000ab2c    0x14  time_stamp.o [1]
+  .rodata              const    0x0000ab40    0x14  time_stamp.o [1]
+  .rodata              const    0x0000ab54    0x10  ff.o [1]
+  .rodata              const    0x0000ab64    0x10  main.o [1]
+  .rodata              const    0x0000ab74    0x10  time_stamp.o [1]
+  .rodata              const    0x0000ab84    0x10  time_stamp.o [1]
+  .rodata              const    0x0000ab94     0xc  adi_spi.o [1]
+  .rodata              const    0x0000aba0     0xc  common.o [1]
+  .rodata              const    0x0000abac     0xc  sd.o [1]
+  .text                ro code  0x0000abb8     0xc  cstartup_M.o [5]
+  .rodata              const    0x0000abc4     0x8  main.o [1]
+  .rodata              const    0x0000abcc     0x8  sd.o [1]
+  .rodata              const    0x0000abd4     0x8  time_stamp.o [1]
+  .rodata              const    0x0000abdc     0x4  adi_dma.o [1]
+  .rodata              const    0x0000abe0     0x4  adi_dma.o [1]
+  .rodata              const    0x0000abe4     0x4  common.o [1]
+  .rodata              const    0x0000abe8     0x4  common.o [1]
+  .text                ro code  0x0000abec     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000abf0     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000abf4     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000abf8     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000abfc     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac00     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac04     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac08     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac0c     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac10     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac14     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac18     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac1c     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac20     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac24     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac28     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac2c     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac30     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac34     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac38     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac3c     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac40     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac44     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac48     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac4c     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac50     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac54     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac58     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac5c     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac60     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac64     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac68     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac6c     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac70     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac74     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac78     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac7c     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac80     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac84     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac88     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac8c     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac90     0x4  startup_ADuCM3029.o [1]
+  .text                ro code  0x0000ac94     0x4  startup_ADuCM3029.o [1]
+  SHT$$PREINIT_ARRAY            0x0000ac98     0x4  <Block>
+    .prepreinit_array  const    0x0000ac98     0x4  xlocale_c.o [3]
+  SHT$$INIT_ARRAY               0x0000ac9c     0x0  <Block>
+  .rodata              const    0x0000ac9c     0x0  zero_init3.o [5]
+  .rodata              const    0x0000ac9c     0x0  packbits_init_single.o [5]
+  Initializer bytes    const    0x0000ac9c    0x83  <for P3-1>
+                              - 0x0000ad1f  0xa51f
+
+"P3", part 1 of 3:                           0x148
+  P3-1                          0x20000000   0x148  <Init block>
+    .data              inited   0x20000000    0x10  adi_gpio.o [1]
+    .data              inited   0x20000010    0x10  adi_i2c.o [1]
+    .data              inited   0x20000020     0xc  adi_i2c.o [1]
+    .data              inited   0x2000002c     0x4  adi_i2c.o [1]
+    .data              inited   0x20000030    0x18  adi_rtc.o [1]
+    .data              inited   0x20000048    0x48  adi_rtc.o [1]
+    .data              inited   0x20000090    0x3c  adi_spi.o [1]
+    .data              inited   0x200000cc    0x10  adi_uart.o [1]
+    .data              inited   0x200000dc     0x8  XShttio.o [3]
+    __DLIB_PERTHREAD   inited   0x200000e4     0x4  errno.o [3]
+    __DLIB_PERTHREAD   inited   0x200000e8     0x8  localtim.o [3]
+    __DLIB_PERTHREAD   inited   0x200000f0    0x1c  asctime.o [3]
+    __DLIB_PERTHREAD   inited   0x2000010c     0x8  setlocale.o [3]
+    __DLIB_PERTHREAD   inited   0x20000114    0x2c  xttotm.o [3]
+    __DLIB_PERTHREAD   inited   0x20000140     0x4  xisdst.o [3]
+    __DLIB_PERTHREAD   inited   0x20000144     0x4  xisdstData.o [3]
+                              - 0x20000148   0x148
+
+"P3", part 2 of 3:                           0x200
+  HEAP                          0x20000148   0x200  <Block>
+    HEAP               uninit   0x20000148   0x200  <Block tail>
+                              - 0x20000348   0x200
+
+"P3", part 3 of 3:                           0x67c
+  .bss                 zero     0x20000400   0x400  adi_dma.o [1]
+  .bss                 zero     0x20000800    0xe0  adi_dma.o [1]
+  .bss                 zero     0x200008e0    0x98  common.o [1]
+  .bss                 zero     0x20000978    0x54  xlocale_c.o [3]
+  .bss                 zero     0x200009cc    0x2c  sdcard_spi_hal.o [1]
+  .bss                 zero     0x200009f8    0x20  sd.o [1]
+  .bss                 zero     0x20000a18    0x18  time_stamp.o [1]
+  .bss                 zero     0x20000a30    0x10  sdcard_spi_hal.o [1]
+  .bss                 zero     0x20000a40     0x8  ADT7420.o [1]
+  .bss                 zero     0x20000a48     0x8  xxmemxmalloc.o [3]
+  .bss                 zero     0x20000a50     0x4  adi_pwr.o [1]
+  .bss                 zero     0x20000a54     0x4  adi_pwr.o [1]
+  .bss                 zero     0x20000a58     0x4  adi_pwr.o [1]
+  .bss                 zero     0x20000a5c     0x4  ff.o [1]
+  .bss                 zero     0x20000a60     0x4  sdcard_spi_hal.o [1]
+  .bss                 zero     0x20000a64     0x4  system_ADuCM3029.o [1]
+  .bss                 zero     0x20000a68     0x4  system_ADuCM3029.o [1]
+  .bss                 zero     0x20000a6c     0x4  system_ADuCM3029.o [1]
+  .bss                 zero     0x20000a70     0x4  time_stamp.o [1]
+  .bss                 zero     0x20000a74     0x4  xgetmemchunk.o [3]
+  .bss                 zero     0x20000a78     0x2  adi_i2c.o [1]
+  .bss                 zero     0x20000a7a     0x2  ff.o [1]
+                              - 0x20000a7c   0x67c
+
+"A6":                                        0x400
+  CSTACK                        0x20001c00   0x400  <Block>
+    CSTACK             uninit   0x20001c00   0x400  <Block tail>
+                              - 0x20002000   0x400
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x67c:
+          0x20000400  0x67c
+
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x83 (39% of destination):
+          0x0000ac9c   0x83
+    1 destination range, total size 0x148:
+          0x20000000  0x148
+
+Extra (__iar_cstart_call_ctors)
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+C:\Analog Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj: [1]
+    ADT7420.o                   412                 8
+    PinMux.o                     52
+    adi_dma.o                   388        8    1 248
+    adi_gpio.o                  376        6       16
+    adi_i2c.o                 1 532       13       34
+    adi_pwr.o                 1 244                12
+    adi_rtc.o                 1 560       38       96
+    adi_spi.o                 2 012       36       60
+    adi_uart.o                1 008        6       16
+    common.o                     92       20      152
+    diskio.o                    142
+    ff.o                      6 770       16        6
+    main.o                      164       44
+    sd.o                      1 592       22       32
+    sdcard_spi_hal.o            416                64
+    startup_ADuCM3029.o         524
+    system_ADuCM3029.o          280       32       12
+    time_stamp.o              1 420      508       28
+    -------------------------------------------------
+    Total:                   19 984      749    1 784
+
+command line: [2]
+    -------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    XShttio.o                     8        4        8
+    asctime.o                    44       12       28
+    cppinit.o                    24
+    ctime.o                      14
+    div.o                        14
+    errno.o                      12        1        4
+    exit.o                        4
+    getzone.o                    10
+    localtim.o                  182        3        8
+    low_level_init.o              4
+    printf.o                     36
+    putchar.o                    40
+    setlocale.o                  41        3        8
+    sprintf.o                    52
+    sscanf.o                     36
+    strncmp.o                    44
+    xgentime.o                2 114
+    xgetdst.o                   350
+    xgetmemchunk.o               44                 4
+    xgettime.o                   66
+    xisdst.o                    308        2        4
+    xisdstData.o                           2        4
+    xlocale_c.o                 384        4       84
+    xprintffull.o             3 530
+    xprout.o                     22
+    xscanffull.o              2 940
+    xsprout.o                    10
+    xsscin.o                     30
+    xstoflt.o                   428
+    xstol.o                     134
+    xstoll.o                    164
+    xstopfx.o                   286
+    xstoul.o                    408
+    xstoull.o                   436
+    xstoxflt.o                  512
+    xstrftim.o                  206
+    xtls.o                        2
+    xttotm.o                    392       17       44
+    xxmemxfree.o                128
+    xxmemxmalloc.o              176                 8
+    -------------------------------------------------
+    Total:                   13 635       48      204
+
+m7M_tl.a: [4]
+    DblAdd.o                    232
+    DblCmpEq.o                   32
+    DblCmpGe.o                   46
+    DblCmpLe.o                   46
+    DblDiv.o                    598
+    DblMul.o                    418
+    DblSub.o                    384
+    DblToFlt.o                  144
+    DblToI32.o                   88
+    FltAdd.o                    116
+    FltSub.o                    230
+    FltToDbl.o                   78
+    FltToS32.o                   68
+    I32ToDbl.o                   48
+    I32ToFlt.o                   46
+    pow.o                     2 120
+    xdint.o                     122
+    xdnorm.o                     68
+    xdscale.o                   268
+    xdtento.o                   512
+    xdtest.o                     50
+    xdunscal.o                   82
+    xexp.o                      700
+    xlog.o                      172
+    xstold.o                    332
+    -------------------------------------------------
+    Total:                    7 000
+
+rt7M_tl.a: [5]
+    ABImemcpy_unaligned.o       118
+    ABImemset.o                 102
+    I64DivMod.o                 238
+    I64DivZer.o                   2
+    cexit.o                      10
+    cmain.o                      26
+    cmain_call_ctors.o           32
+    cstartup_M.o                 12
+    data_init.o                  40
+    memchr.o                     88
+    packbits_init_single.o       56
+    strchr.o                     22
+    strlen.o                     54
+    zero_init3.o                 64
+    -------------------------------------------------
+    Total:                      864
+
+shb_l.a: [6]
+    dwrite.o                     30
+    exit.o                       20
+    iarttio.o                   108
+    iarwrite.o                   34
+    iarwstd.o                    32
+    time.o                       18
+    write.o                      16
+    -------------------------------------------------
+    Total:                      258
+
+    Gaps                         45        4
+    Linker created                        36    1 540
+-----------------------------------------------------
+    Grand Total:             41 786      837    3 528
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x0000a9b8          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x0000a9dc          --   Gb  - Linker created -
+?main                   0x0000aab1         Code  Gb  cmain.o [5]
+ADT7420_get_temperature
+                        0x0000a351   0xac  Code  Gb  ADT7420.o [1]
+Battery_Voltage_Int_Handler
+                        0x00004dc1   0x2e  Code  Gb  adi_pwr.o [1]
+BuildSeconds            0x0000926b  0x1e0  Code  Lc  time_stamp.o [1]
+CHECKSUM$$Base          0x000007fc          --   Gb  - Linker created -
+CHECKSUM$$Limit         0x00000800          --   Gb  - Linker created -
+CSTACK$$Base            0x20001c00          --   Gb  - Linker created -
+CSTACK$$Limit           0x20002000          --   Gb  - Linker created -
+CommonInterruptHandler  0x00003531   0x6e  Code  Lc  adi_gpio.o [1]
+Common_Uart_Interrupt_Handler
+                        0x00009f95  0x1e8  Code  Lc  adi_uart.o [1]
+Crystal_osc_Int_Handler
+                        0x00004d67   0x5a  Code  Gb  adi_pwr.o [1]
+DMA_DevData             0x20000800   0xe0  Data  Lc  adi_dma.o [1]
+DMA_Err_Int_Handler     0x000049dd   0x94  Code  Gb  adi_dma.o [1]
+DMA_SPI0_RX_Int_Handler
+                        0x00003cf5   0x24  Code  Gb  adi_spi.o [1]
+DMA_SPI0_TX_Int_Handler
+                        0x00003ceb    0xa  Code  Gb  adi_spi.o [1]
+DMA_SPI1_RX_Int_Handler
+                        0x00003d23   0x24  Code  Gb  adi_spi.o [1]
+DMA_SPI1_TX_Int_Handler
+                        0x00003d19    0xa  Code  Gb  adi_spi.o [1]
+DMA_SPI2_RX_Int_Handler
+                        0x00003d51   0x24  Code  Gb  adi_spi.o [1]
+DMA_SPI2_TX_Int_Handler
+                        0x00003d47    0xa  Code  Gb  adi_spi.o [1]
+DMA_UART_RX_Int_Handler
+                        0x0000a18f   0x12  Code  Gb  adi_uart.o [1]
+DMA_UART_TX_Int_Handler
+                        0x0000a17d   0x12  Code  Gb  adi_uart.o [1]
+FatFs                   0x20000a5c    0x4  Data  Lc  ff.o [1]
+Fsid                    0x20000a7a    0x2  Data  Lc  ff.o [1]
+GPIOCallbackMem         0x20000a30   0x10  Data  Lc  sdcard_spi_hal.o [1]
+GPIO_A_Int_Handler      0x000035a9    0xc  Code  Gb  adi_gpio.o [1]
+GPIO_B_Int_Handler      0x000035b5    0xc  Code  Gb  adi_gpio.o [1]
+HEAP$$Base              0x20000148          --   Gb  - Linker created -
+HEAP$$Limit             0x20000348          --   Gb  - Linker created -
+I2C0_Master_Int_Handler
+                        0x00008e97   0x86  Code  Gb  adi_i2c.o [1]
+ISOwkyr                 0x00007921   0xb8  Code  Lc  xgentime.o [3]
+InitClock               0x00008f41   0x70  Code  Lc  time_stamp.o [1]
+LoadInt                 0x00005775   0x6e  Code  Lc  xprintffull.o [3]
+NVIC_DisableIRQ         0x0000895b   0x16  Code  Lc  adi_i2c.o [1]
+NVIC_DisableIRQ         0x000035d7   0x16  Code  Lc  adi_spi.o [1]
+NVIC_EnableIRQ          0x0000491d   0x14  Code  Lc  adi_dma.o [1]
+NVIC_EnableIRQ          0x00003449   0x14  Code  Lc  adi_gpio.o [1]
+NVIC_EnableIRQ          0x00008945   0x16  Code  Lc  adi_i2c.o [1]
+NVIC_EnableIRQ          0x00004aa1   0x16  Code  Lc  adi_pwr.o [1]
+NVIC_EnableIRQ          0x0000832d   0x16  Code  Lc  adi_rtc.o [1]
+NVIC_EnableIRQ          0x000035c1   0x16  Code  Lc  adi_spi.o [1]
+PLL_Int_Handler         0x00004d29   0x3e  Code  Gb  adi_pwr.o [1]
+RTC0_Int_Handler        0x0000858f  0x1ce  Code  Gb  adi_rtc.o [1]
+RTC1_Int_Handler        0x0000876d  0x1ce  Code  Gb  adi_rtc.o [1]
+Region$$Table$$Base     0x0000a9b8          --   Gb  - Linker created -
+Region$$Table$$Limit    0x0000a9dc          --   Gb  - Linker created -
+RxDmaErrorCallback      0x00003c29   0x4e  Code  Lc  adi_spi.o [1]
+SHT$$INIT_ARRAY$$Base   0x0000ac9c          --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Limit  0x0000ac9c          --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Base
+                        0x0000ac98          --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Limit
+                        0x0000ac9c          --   Gb  - Linker created -
+SPI0_Int_Handler        0x00003cc7    0xc  Code  Gb  adi_spi.o [1]
+SPI1_Int_Handler        0x00003cd3    0xc  Code  Gb  adi_spi.o [1]
+SPI2_Int_Handler        0x00003cdf    0xc  Code  Gb  adi_spi.o [1]
+SPIMem                  0x200009cc   0x2c  Data  Lc  sdcard_spi_hal.o [1]
+StartTransaction        0x00003859  0x29e  Code  Lc  adi_spi.o [1]
+SystemCoreClock         0x20000a6c    0x4  Data  Gb  system_ADuCM3029.o [1]
+SystemCoreClockUpdate   0x000050bd   0x8c  Code  Gb  system_ADuCM3029.o [1]
+SystemInit              0x00005149   0x2e  Code  Gb  system_ADuCM3029.o [1]
+TxDmaErrorCallback      0x00003c79   0x4e  Code  Lc  adi_spi.o [1]
+UART_Int_Handler        0x00009f85   0x10  Code  Gb  adi_uart.o [1]
+Vreg_over_Int_Handler   0x00004def   0x42  Code  Gb  adi_pwr.o [1]
+_Asctime_tbuf           0x200000f0   0x1c  Data  Lc  asctime.o [3]
+_CStrftime              0x00009a2d   0xc8  Code  Gb  xstrftim.o [3]
+_GenldFull              0x00005ced  0x26a  Code  Lc  xprintffull.o [3]
+_Gentime                0x00007ae9  0x59a  Code  Gb  xgentime.o [3]
+_GetN                   0x00006149   0x22  Code  Lc  xscanffull.o [3]
+_Get_LocaleC_Tinfo      0x000098fb    0x4  Code  Gb  xlocale_c.o [3]
+_Getdst                 0x00009cd1  0x132  Code  Gb  xgetdst.o [3]
+_GetfldFull             0x00006317  0x10a  Code  Lc  xscanffull.o [3]
+_GetfloatFull           0x000067e1  0x4ce  Code  Lc  xscanffull.o [3]
+_GetintFull             0x000065e9  0x1f2  Code  Lc  xscanffull.o [3]
+_GetstrFull             0x00006421  0x1c2  Code  Lc  xscanffull.o [3]
+_Gettime                0x000080bf   0x42  Code  Gb  xgettime.o [3]
+_IsdstStr               0x20000110    0x4  Data  Gb  setlocale.o [3]
+_Isdst_olddst           0x20000140    0x4  Data  Lc  xisdst.o [3]
+_Isdst_rules            0x20000144    0x4  Data  Gb  xisdstData.o [3]
+_LdtobFull              0x000058ed  0x3fa  Code  Lc  xprintffull.o [3]
+_LitobFull              0x000057e3  0x10a  Code  Lc  xprintffull.o [3]
+_LocaleC_Tinfo          0x20000978   0x54  Data  Lc  xlocale_c.o [3]
+_Localtime_oldzone      0x200000e8    0x4  Data  Lc  localtim.o [3]
+_Localtime_tzoff        0x200000ec    0x4  Data  Lc  localtim.o [3]
+_PrintfFull             0x000051d5  0x59a  Code  Gb  xprintffull.o [3]
+_Prout                  0x0000ab01   0x16  Code  Gb  xprout.o [3]
+_PutcharsFull           0x00005f57   0x2e  Code  Lc  xprintffull.o [3]
+_SProut                 0x0000231f    0xa  Code  Gb  xsprout.o [3]
+_SScin                  0x00002273   0x1e  Code  Gb  xsscin.o [3]
+_ScanfFull              0x00006185  0x192  Code  Gb  xscanffull.o [3]
+_Stoflt                 0x00007219  0x1ac  Code  Gb  xstoflt.o [3]
+_Stopfx                 0x000070f9  0x11e  Code  Gb  xstopfx.o [3]
+_Stoxflt                0x00007629  0x1cc  Code  Gb  xstoxflt.o [3]
+_Stoxflt::digits        0x000077f8   0x18  Data  Lc  xstoxflt.o [3]
+_Stoxflt::vals          0x00007810   0x18  Data  Lc  xstoxflt.o [3]
+_Ttotm_ts               0x20000114   0x2c  Data  Lc  xttotm.o [3]
+_Tzoff                  0x00009601   0x94  Code  Gb  localtim.o [3]
+_TzoneStr               0x2000010c    0x4  Data  Gb  setlocale.o [3]
+_UngetN                 0x0000616b   0x1a  Code  Lc  xscanffull.o [3]
+__Vectors               0x00000000          --   Gb  startup_ADuCM3029.o [1]
+__Vectors_End           0x00000140         Data  Gb  startup_ADuCM3029.o [1]
+__Vectors_Size {Abs}    0x00000140          --   Gb  startup_ADuCM3029.o [1]
+__aeabi_cdcmpeq         0x00003e5d         Code  Gb  DblCmpEq.o [4]
+__aeabi_cdcmple         0x00003eb9         Code  Gb  DblCmpLe.o [4]
+__aeabi_cdrcmple        0x00003e89         Code  Gb  DblCmpGe.o [4]
+__aeabi_d2f             0x00007069         Code  Gb  DblToFlt.o [4]
+__aeabi_d2iz            0x00003379         Code  Gb  DblToI32.o [4]
+__aeabi_d2uiz           0x000033a5         Code  Gb  DblToI32.o [4]
+__aeabi_dadd            0x0000408d         Code  Gb  DblAdd.o [4]
+__aeabi_ddiv            0x000042f5         Code  Gb  DblDiv.o [4]
+__aeabi_dmul            0x00003ee9         Code  Gb  DblMul.o [4]
+__aeabi_dsub            0x00004175         Code  Gb  DblSub.o [4]
+__aeabi_errno_addr      0x00003e7d    0x6  Code  Gb  errno.o [3]
+__aeabi_f2d             0x0000a649         Code  Gb  FltToDbl.o [4]
+__aeabi_f2iz            0x0000a4ed         Code  Gb  FltToS32.o [4]
+__aeabi_fsub            0x0000a561         Code  Gb  FltSub.o [4]
+__aeabi_i2d             0x00002b01         Code  Gb  I32ToDbl.o [4]
+__aeabi_i2f             0x0000a531         Code  Gb  I32ToFlt.o [4]
+__aeabi_ldiv0           0x00006145         Code  Gb  I64DivZer.o [5]
+__aeabi_memset          0x000048b5         Code  Gb  ABImemset.o [5]
+__aeabi_ui2d            0x00002b15         Code  Gb  I32ToDbl.o [4]
+__aeabi_uldivmod        0x00006049         Code  Gb  I64DivMod.o [5]
+__call_ctors            0x0000aa7d   0x18  Code  Gb  cppinit.o [3]
+__cmain                 0x0000aab1         Code  Gb  cmain.o [5]
+__ctime32               0x00009573    0xe  Code  Gb  ctime.o [3]
+__data_Aldata           0x20000a48    0x8  Data  Gb  xxmemxmalloc.o [3]
+__data_GetMemChunk      0x00009f35   0x2c  Code  Gb  xgetmemchunk.o [3]
+__data_GetMemChunk::start
+                        0x20000a74    0x4  Data  Lc  xgetmemchunk.o [3]
+__dwrite                0x0000a8c5   0x1e  Code  Gb  dwrite.o [6]
+__exit                  0x000096e5   0x14  Code  Gb  exit.o [6]
+__getzone               0x00008189    0x6  Code  Gb  getzone.o [3]
+__iar_Daysto32          0x00009725   0x3a  Code  Gb  xttotm.o [3]
+__iar_Dint              0x00003de1   0x7a  Code  Gb  xdint.o [4]
+__iar_Dnorm             0x00003d9d   0x44  Code  Gb  xdnorm.o [4]
+__iar_Dscale            0x00004fb1  0x10c  Code  Gb  xdscale.o [4]
+__iar_Dtentox           0x0000747b  0x14e  Code  Gb  xdtento.o [4]
+__iar_Dtest             0x00004f7f   0x32  Code  Gb  xdtest.o [4]
+__iar_Dunscale          0x00007829   0x52  Code  Gb  xdunscal.o [4]
+__iar_Errno             0x200000e4    0x4  Data  Gb  errno.o [3]
+__iar_Exp               0x000045f9  0x2b6  Code  Gb  xexp.o [4]
+__iar_Isdst32           0x00009b69  0x134  Code  Gb  xisdst.o [3]
+__iar_Logpoly           0x0000454d   0x70  Code  Gb  xlog.o [4]
+__iar_Memchr            0x00005ff1         Code  Gb  memchr.o [5]
+__iar_Memset            0x000048b5         Code  Gb  ABImemset.o [5]
+__iar_Memset_word       0x000048bd         Code  Gb  ABImemset.o [5]
+__iar_Stold             0x00007065    0x4  Code  Gb  xstold.o [4]
+__iar_Stoldx            0x00006f1d  0x13a  Code  Gb  xstold.o [4]
+__iar_Stoll             0x00006d65    0x4  Code  Gb  xstoll.o [3]
+__iar_Stollx            0x00006cc5   0xa0  Code  Gb  xstoll.o [3]
+__iar_Stolx             0x00008101   0x86  Code  Gb  xstol.o [3]
+__iar_Stoull            0x00006ec9    0x4  Code  Gb  xstoull.o [3]
+__iar_Stoullx           0x00006d69  0x15a  Code  Gb  xstoull.o [3]
+__iar_Stoulx            0x00008195  0x142  Code  Gb  xstoul.o [3]
+__iar_Strchr            0x00005fa1         Code  Gb  strchr.o [5]
+__iar_Ttotm32           0x0000975f  0x112  Code  Gb  xttotm.o [3]
+__iar_TzoneStr_init     0x000096f9   0x24  Code  Gb  setlocale.o [3]
+__iar_close_ttio        0x00009afd   0x2e  Code  Gb  iarttio.o [6]
+__iar_cstart_call_ctors
+                        0x0000aa5d   0x20  Code  Gb  cmain_call_ctors.o [5]
+__iar_d2uiz             0x000033b1         Code  Gb  DblToI32.o [4]
+__iar_dadd              0x000040a1         Code  Gb  DblAdd.o [4]
+__iar_data_init3        0x0000a925   0x28  Code  Gb  data_init.o [5]
+__iar_dlib_perthread_access
+                        0x00004f7d    0x2  Code  Gb  xtls.o [3]
+__iar_dsub              0x00004189         Code  Gb  DblSub.o [4]
+__iar_dsubStart         0x0000419b         Code  Gb  DblSub.o [4]
+__iar_fadd              0x0000a699         Code  Gb  FltAdd.o [4]
+__iar_fsub              0x0000a571         Code  Gb  FltSub.o [4]
+__iar_fsubStart         0x0000a581         Code  Gb  FltSub.o [4]
+__iar_get_ttio          0x00009b2d   0x38  Code  Gb  iarttio.o [6]
+__iar_lookup_ttioh      0x00009c9d    0x8  Code  Gb  XShttio.o [3]
+__iar_packbits_init_single3
+                        0x0000a825   0x38  Code  Gb  packbits_init_single.o [5]
+__iar_program_start     0x0000abb9         Code  Gb  cstartup_M.o [5]
+__iar_sh_stdout         0x0000a8e3   0x20  Code  Gb  iarwstd.o [6]
+__iar_sh_write          0x0000a903   0x22  Code  Gb  iarwrite.o [6]
+__iar_ttio_handles      0x200000dc    0x8  Data  Lc  XShttio.o [3]
+__iar_ui2d              0x00002b19         Code  Gb  I32ToDbl.o [4]
+__iar_ui2f              0x0000a545         Code  Gb  I32ToFlt.o [4]
+__iar_unaligned___aeabi_memcpy
+                        0x000033d1         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy4
+                        0x000033f1         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy8
+                        0x000033f1         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_zero_init3        0x0000a7e5   0x40  Code  Gb  zero_init3.o [5]
+__localtime32           0x0000969d   0x1a  Code  Gb  localtim.o [3]
+__low_level_init        0x0000aacb    0x4  Code  Gb  low_level_init.o [3]
+__sti__routine          0x000098ad   0x4e  Code  Lc  xlocale_c.o [3]
+__time32                0x00009561   0x12  Code  Gb  time.o [6]
+__vector_table          0x00000000         Data  Gb  startup_ADuCM3029.o [1]
+__vector_table_0x1c     0x0000001c         Data  Gb  startup_ADuCM3029.o [1]
+__write                 0x0000a8b5   0x10  Code  Gb  write.o [6]
+_call_main              0x0000aabd         Code  Gb  cmain.o [5]
+_exit                   0x000095f5         Code  Gb  cexit.o [5]
+_main                   0x0000aac7         Code  Gb  cmain.o [5]
+aDebugString            0x200008e0   0x98  Data  Gb  common.o [1]
+aRTCConfig              0x20000048   0x48  Data  Lc  adi_rtc.o [1]
+aRTCDeviceInfo          0x20000030   0x18  Data  Lc  adi_rtc.o [1]
+aRtcDevMem0             0x20000a18   0x18  Data  Lc  time_stamp.o [1]
+adi_aducm302x_security_options
+                        0x00000180   0x20  Data  Wk  system_ADuCM3029.o [1]
+adi_dma_Init            0x00004931   0x5e  Code  Gb  adi_dma.o [1]
+adi_dma_RegisterCallback
+                        0x0000498f   0x4e  Code  Gb  adi_dma.o [1]
+adi_gpio_Device         0x20000000   0x10  Data  Lc  adi_gpio.o [1]
+adi_gpio_Init           0x0000345d   0x44  Code  Gb  adi_gpio.o [1]
+adi_gpio_OutputEnable   0x000034a1   0x36  Code  Gb  adi_gpio.o [1]
+adi_gpio_PullUpEnable   0x000034d7   0x36  Code  Gb  adi_gpio.o [1]
+adi_gpio_SetHigh        0x0000350d   0x12  Code  Gb  adi_gpio.o [1]
+adi_gpio_SetLow         0x0000351f   0x12  Code  Gb  adi_gpio.o [1]
+adi_i2c_Close           0x000089ff   0x16  Code  Gb  adi_i2c.o [1]
+adi_i2c_Open            0x00008971   0x8e  Code  Gb  adi_i2c.o [1]
+adi_i2c_ReadWrite       0x00008a15   0x60  Code  Gb  adi_i2c.o [1]
+adi_i2c_Reset           0x00008a75   0x10  Code  Gb  adi_i2c.o [1]
+adi_i2c_SetBitRate      0x00008a85   0x7e  Code  Gb  adi_i2c.o [1]
+adi_i2c_SetSlaveAddress
+                        0x00008b03   0x1e  Code  Gb  adi_i2c.o [1]
+adi_initpinmux          0x0000a7b1   0x12  Code  Gb  PinMux.o [1]
+adi_initpinmux_i2c      0x0000a7c3   0x1a  Code  Gb  PinMux.o [1]
+adi_pwr_EnableClockSource
+                        0x00004c75   0xb4  Code  Gb  adi_pwr.o [1]
+adi_pwr_EnterLowPowerMode
+                        0x00004e31   0xca  Code  Gb  adi_pwr.o [1]
+adi_pwr_ExitLowPowerMode
+                        0x00004efb   0x32  Code  Gb  adi_pwr.o [1]
+adi_pwr_GetClockFrequency
+                        0x00004bb7   0x4e  Code  Gb  adi_pwr.o [1]
+adi_pwr_Init            0x00004ab7   0xc6  Code  Gb  adi_pwr.o [1]
+adi_pwr_SetClockDivider
+                        0x00004c05   0x70  Code  Gb  adi_pwr.o [1]
+adi_pwr_SetLFClockMux   0x00004b7d   0x3a  Code  Gb  adi_pwr.o [1]
+adi_rtc_Enable          0x00008425   0x4c  Code  Gb  adi_rtc.o [1]
+adi_rtc_EnableTrim      0x00008471   0x4c  Code  Gb  adi_rtc.o [1]
+adi_rtc_Open            0x00008343   0xe2  Code  Gb  adi_rtc.o [1]
+adi_rtc_SetCount        0x000084bd   0x44  Code  Gb  adi_rtc.o [1]
+adi_rtc_SetTrim         0x00008501   0x2e  Code  Gb  adi_rtc.o [1]
+adi_spi_Close           0x000036ad   0x1c  Code  Gb  adi_spi.o [1]
+adi_spi_MasterSubmitBuffer
+                        0x0000375f   0xfa  Code  Gb  adi_spi.o [1]
+adi_spi_Open            0x000035ed   0xc0  Code  Gb  adi_spi.o [1]
+adi_spi_SetBitrate      0x0000370d   0x48  Code  Gb  adi_spi.o [1]
+adi_spi_SetChipSelect   0x00003755    0xa  Code  Gb  adi_spi.o [1]
+adi_spi_SetContinuousMode
+                        0x000036e5   0x28  Code  Gb  adi_spi.o [1]
+adi_spi_SetIrqmode      0x000036c9   0x1c  Code  Gb  adi_spi.o [1]
+adi_spi_isBufferAvailable
+                        0x00003af7    0xc  Code  Gb  adi_spi.o [1]
+adi_sys_base            0x2000002c    0x4  Data  Lc  adi_i2c.o [1]
+adi_system_EnableRetention
+                        0x00005177   0x2e  Code  Gb  system_ADuCM3029.o [1]
+adi_uart_ConfigBaudRate
+                        0x00009f61   0x24  Code  Gb  adi_uart.o [1]
+alt_digits              0x00009904    0x1  Data  Lc  xlocale_c.o [3]
+am_pm                   0x00009908    0x8  Data  Lc  xlocale_c.o [3]
+asctime                 0x000096b9   0x24  Code  Gb  asctime.o [3]
+check_fs                0x0000131d   0x7c  Code  Lc  ff.o [1]
+chk_chr                 0x0000089f   0x14  Code  Lc  ff.o [1]
+clust2sect              0x000009e7   0x1a  Code  Lc  ff.o [1]
+cmp_era_date            0x000079dd   0x7a  Code  Lc  xgentime.o [3]
+commenceReceive         0x00008c19   0x98  Code  Lc  adi_i2c.o [1]
+commenceTransmit        0x00008ba3   0x76  Code  Lc  adi_i2c.o [1]
+common_Fail             0x00009503   0x30  Code  Gb  common.o [1]
+common_Init             0x00009501    0x2  Code  Gb  common.o [1]
+common_Perf             0x00009533   0x1c  Code  Gb  common.o [1]
+common_SPI_Int_Handler  0x00003b03  0x124  Code  Lc  adi_spi.o [1]
+completeHandler         0x00008e11   0x28  Code  Lc  adi_i2c.o [1]
+create_chain            0x00000cc7  0x106  Code  Lc  ff.o [1]
+create_name             0x00001121  0x108  Code  Lc  ff.o [1]
+days                    0x00009910   0x58  Data  Lc  xlocale_c.o [3]
+digits                  0x00006ecc   0x28  Data  Lc  xstoull.o [3]
+digits                  0x000082dc   0x28  Data  Lc  xstoul.o [3]
+dir_alloc               0x00000fa7   0x6e  Code  Lc  ff.o [1]
+dir_find                0x00001065   0x76  Code  Lc  ff.o [1]
+dir_next                0x00000e81  0x126  Code  Lc  ff.o [1]
+dir_register            0x000010db   0x46  Code  Lc  ff.o [1]
+dir_sdi                 0x00000dcd   0xb4  Code  Lc  ff.o [1]
+disk_initialize         0x000022a5   0x14  Code  Gb  diskio.o [1]
+disk_ioctl              0x00002301   0x1e  Code  Gb  diskio.o [1]
+disk_read               0x000022b9   0x20  Code  Gb  diskio.o [1]
+disk_status             0x00002291   0x14  Code  Gb  diskio.o [1]
+disk_write              0x000022d9   0x20  Code  Gb  diskio.o [1]
+div                     0x00006137    0xe  Code  Gb  div.o [3]
+dmul                    0x00007429   0x52  Code  Lc  xdtento.o [4]
+era                     0x00009968    0x1  Data  Lc  xlocale_c.o [3]
+errorHandler            0x00008e39   0x5e  Code  Lc  adi_i2c.o [1]
+exit                    0x0000955d    0x4  Code  Gb  exit.o [3]
+f_close                 0x00001cc9   0x2c  Code  Gb  ff.o [1]
+f_closedir              0x00001f1f   0x1e  Code  Gb  ff.o [1]
+f_lseek                 0x00001cf5  0x1a8  Code  Gb  ff.o [1]
+f_mount                 0x00001757   0x60  Code  Gb  ff.o [1]
+f_open                  0x000017d5  0x236  Code  Gb  ff.o [1]
+f_opendir               0x00001e9d   0x82  Code  Gb  ff.o [1]
+f_printf                0x00001fbb  0x2b8  Code  Gb  ff.o [1]
+f_sync                  0x00001c23   0xa6  Code  Gb  ff.o [1]
+f_write                 0x00001a0b  0x218  Code  Gb  ff.o [1]
+find_volume             0x000013a5  0x36a  Code  Lc  ff.o [1]
+fmts                    0x0000996c   0x30  Data  Lc  xlocale_c.o [3]
+follow_path             0x00001229   0xa4  Code  Lc  ff.o [1]
+free                    0x00009e05   0x7a  Code  Gb  xxmemxfree.o [3]
+ftoa                    0x0000a45d   0x7e  Code  Gb  ADT7420.o [1]
+gChannelControlDataArray
+                        0x20000400  0x400  Data  Lc  adi_dma.o [1]
+gConfigInfo             0x20000020    0xc  Data  Lc  adi_i2c.o [1]
+gSPICfg                 0x0000ab94    0xc  Data  Lc  adi_spi.o [1]
+get_card_specific_data  0x0000260d  0x126  Code  Lc  sd.o [1]
+get_fat                 0x00000a01   0xe6  Code  Lc  ff.o [1]
+get_fattime             0x000022f9    0x4  Code  Gb  diskio.o [1]
+get_ldnumber            0x000012cd   0x50  Code  Lc  ff.o [1]
+get_time_date           0x000090dd   0x24  Code  Gb  time_stamp.o [1]
+getera                  0x00007a57   0x90  Code  Lc  xgentime.o [3]
+getint                  0x00009ca5   0x2c  Code  Lc  xgetdst.o [3]
+getval                  0x0000787d   0x60  Code  Lc  xgentime.o [3]
+gnLowPowerIntOccFlag    0x20000a58    0x4  Data  Lc  adi_pwr.o [1]
+gpPowcbParam            0x20000a54    0x4  Data  Lc  adi_pwr.o [1]
+gpfCallbackFunction     0x20000a50    0x4  Data  Lc  adi_pwr.o [1]
+gpioClock               0x20000a68    0x4  Data  Gb  system_ADuCM3029.o [1]
+hDevice0                0x20000a70    0x4  Data  Gb  time_stamp.o [1]
+hfClock                 0x20000a64    0x4  Data  Gb  system_ADuCM3029.o [1]
+i2cReset                0x00008cb1   0x8e  Code  Lc  adi_i2c.o [1]
+i2c_device_info         0x20000010   0x10  Data  Lc  adi_i2c.o [1]
+init_RTC                0x000090cd   0x10  Code  Gb  time_stamp.o [1]
+intToStr                0x0000a41b   0x42  Code  Gb  ADT7420.o [1]
+internal_Pow            0x00002b31  0x412  Code  Lc  pow.o [4]
+isdst                   0x0000999c    0x1  Data  Lc  xlocale_c.o [3]
+isleapyr                0x000078dd   0x44  Code  Lc  xgentime.o [3]
+ld_clust                0x00001015   0x28  Code  Lc  ff.o [1]
+ld_dword                0x00000811   0x1a  Code  Lc  ff.o [1]
+ld_word                 0x00000801   0x10  Code  Lc  ff.o [1]
+lmos                    0x0000987c   0x18  Data  Lc  xttotm.o [3]
+lnbias                  0x00002f58  0x420  Data  Lc  pow.o [4]
+main                    0x0000a70d   0xa4  Code  Gb  main.o [1]
+malloc                  0x00009e85   0xac  Code  Gb  xxmemxmalloc.o [3]
+mem_cmp                 0x0000087b   0x24  Code  Lc  ff.o [1]
+mem_cpy                 0x00000851   0x1c  Code  Lc  ff.o [1]
+mem_set                 0x0000086d    0xe  Code  Lc  ff.o [1]
+memchr                  0x00005ff1         Code  Gb  memchr.o [5]
+mons                    0x000099a0   0x88  Data  Lc  xlocale_c.o [3]
+mos                     0x00009894   0x18  Data  Lc  xttotm.o [3]
+move_window             0x0000090d   0x40  Code  Lc  ff.o [1]
+ndigs                   0x00006ef4   0x28  Data  Lc  xstoull.o [3]
+ndigs                   0x00008304   0x28  Data  Lc  xstoul.o [3]
+pDMA_DevData            0x0000abe0    0x4  Data  Lc  adi_dma.o [1]
+pPrimaryCCD             0x0000abdc    0x4  Data  Gb  adi_dma.o [1]
+pow                     0x00002f49    0xe  Code  Gb  pow.o [4]
+power_on_insertion      0x00002543   0x20  Code  Gb  sd.o [1]
+pows                    0x000075e0   0x48  Data  Lc  xdtento.o [4]
+print_card_identification
+                        0x00002733   0x96  Code  Lc  sd.o [1]
+printf                  0x000095d1   0x24  Code  Gb  printf.o [3]
+put_fat                 0x00000ae7  0x130  Code  Lc  ff.o [1]
+putc_bfd                0x00001f3d   0x42  Code  Lc  ff.o [1]
+putc_flush              0x00001f7f   0x30  Code  Lc  ff.o [1]
+putc_init               0x00001faf    0xc  Code  Lc  ff.o [1]
+putchar                 0x0000a88d   0x28  Code  Gb  putchar.o [3]
+read_response_args      0x00002881   0x22  Code  Gb  sd.o [1]
+receiveHandler          0x00008db9   0x58  Code  Lc  adi_i2c.o [1]
+remove_chain            0x00000c17   0xb0  Code  Lc  ff.o [1]
+reverse                 0x0000a3fd   0x1e  Code  Gb  ADT7420.o [1]
+rtc_Calibrate           0x00008fb1  0x11c  Code  Gb  time_stamp.o [1]
+rtc_Init                0x00009101  0x16a  Code  Lc  time_stamp.o [1]
+rtc_init                0x0000852f   0x60  Code  Lc  adi_rtc.o [1]
+rxData                  0x20000a40    0x8  Data  Gb  ADT7420.o [1]
+sd_init                 0x00002329   0x44  Code  Gb  sd.o [1]
+sd_ioctl                0x000024df   0x64  Code  Gb  sd.o [1]
+sd_read                 0x00002371   0xa4  Code  Gb  sd.o [1]
+sd_reset_sdcard         0x00002563   0x1a  Code  Gb  sd.o [1]
+sd_status               0x0000236d    0x4  Code  Gb  sd.o [1]
+sd_write                0x00002415   0xca  Code  Gb  sd.o [1]
+sdcard_description      0x200009f8   0x20  Data  Gb  sd.o [1]
+send_command            0x000027c9   0xb8  Code  Gb  sd.o [1]
+send_datablock          0x000028a3   0xa6  Code  Gb  sd.o [1]
+spi_chip_select         0x00002961   0x34  Code  Gb  sdcard_spi_hal.o [1]
+spi_clockrate           0x00002995   0x1a  Code  Gb  sdcard_spi_hal.o [1]
+spi_config              0x00002a25   0x16  Code  Gb  sdcard_spi_hal.o [1]
+spi_cs_init             0x000029af   0x30  Code  Lc  sdcard_spi_hal.o [1]
+spi_device_info         0x20000090   0x3c  Data  Lc  adi_spi.o [1]
+spi_init_peripheral     0x000029eb   0x3a  Code  Lc  sdcard_spi_hal.o [1]
+spi_readwrite           0x00002a3b   0xb2  Code  Gb  sdcard_spi_hal.o [1]
+spi_terminate           0x000029df    0xc  Code  Gb  sdcard_spi_hal.o [1]
+spih_Dev                0x20000a60    0x4  Data  Lc  sdcard_spi_hal.o [1]
+sprintf                 0x000094cd   0x34  Code  Gb  sprintf.o [3]
+sscanf                  0x00009581   0x24  Code  Gb  sscanf.o [3]
+st_clust                0x0000103d   0x28  Code  Lc  ff.o [1]
+st_dword                0x00000839   0x18  Code  Lc  ff.o [1]
+st_word                 0x0000082b    0xe  Code  Lc  ff.o [1]
+start_internal_init_proc
+                        0x0000257d   0x90  Code  Lc  sd.o [1]
+strchr                  0x00005fa1         Code  Gb  strchr.o [5]
+strlen                  0x00005fb9         Code  Gb  strlen.o [5]
+strncmp                 0x000095a5   0x2c  Code  Gb  strncmp.o [3]
+submitTransaction       0x00008b21   0x82  Code  Lc  adi_i2c.o [1]
+sync_fs                 0x0000094d   0x9a  Code  Lc  ff.o [1]
+sync_window             0x000008b3   0x5a  Code  Lc  ff.o [1]
+transmitHandler         0x00008d3f   0x7a  Code  Lc  adi_i2c.o [1]
+tzone                   0x00009a28    0x1  Data  Lc  xlocale_c.o [3]
+uZero16                 0x20000a78    0x2  Data  Gb  adi_i2c.o [1]
+uart_ManageProcessedBuffer
+                        0x0000a277   0xd4  Code  Lc  adi_uart.o [1]
+uart_RxDataHandler      0x0000a1a1   0x80  Code  Lc  adi_uart.o [1]
+uart_TxDataHandler      0x0000a221   0x56  Code  Lc  adi_uart.o [1]
+uart_device_info        0x200000cc   0x10  Data  Lc  adi_uart.o [1]
+validate                0x0000170f   0x48  Code  Lc  ff.o [1]
+
+
+[1] = C:\Analog Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tl.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  41 786 bytes of readonly  code memory
+     837 bytes of readonly  data memory
+   3 528 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

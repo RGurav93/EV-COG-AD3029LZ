@@ -1,0 +1,122 @@
+[InterruptLog]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+SumEnabled=0
+ShowTimeSum=1
+SumSortOrder=0
+[DataLog]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+SumEnabled=0
+ShowTimeSum=1
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[Interrupts]
+Enabled=1
+[MemConfig]
+Base=1
+Manual=0
+Ddf=1
+TypeViol=0
+Stop=1
+[Simulator]
+Freq=10000000
+MultiCoreRunAll=1
+[PlDriver]
+MemConfigValue=C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\CONFIG\debugger\AnalogDevices\ioADUCM302x.ddf
+FirstRun=0
+[Jet]
+DisableInterrupts=0
+LeaveRunning=0
+MultiCoreRunAll=0
+JetConnSerialNo=97969900
+JetConnFoundProbes=
+OnlineReset=Software
+PrevWtdReset=Hardware
+[ArmDriver]
+EnableCache=1
+[PlCacheRanges]
+CustomRanges0=0 0 536870912 1 0
+CustomRangesText0=Code
+CustomRanges1=0 536870912 33554432 0 0
+CustomRangesText1=SRAM
+CustomRanges2=0 570425344 33554432 0 0
+CustomRangesText2=bit-banding
+CustomRanges3=0 1073741824 33554432 2 0
+CustomRangesText3=Peripheral
+CustomRanges4=0 1107296256 33554432 2 0
+CustomRangesText4=bit-banding
+CustomRanges5=0 3758096384 536870912 2 0
+CustomRangesText5=Private peripheral
+[DebugChecksum]
+Checksum=502635664
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[SWOManager]
+SamplingDivider=8192
+OverrideClock=0
+CpuClock=0
+SwoClock=0
+DataLogMode=0
+ItmPortsEnabled=63
+ItmTermIOPorts=1
+ItmLogPorts=0
+ItmLogFile=$PROJ_DIR$\ITM.log
+PowerForcePC=1
+PowerConnectPC=1
+[Trace1]
+Enabled=0
+ShowSource=1
+[ETMTraceWindow]
+PortWidth=4
+PortMode=0
+CaptureDataValues=0
+CaptureDataAddresses=0
+CaptureDataRange=0
+DataFirst=0
+DataLast=-1
+StopWhen=0
+StallCPU=0
+NoPCCapture=0
+[Trace2]
+Enabled=0
+ShowSource=0
+[SWOTraceWindow]
+ForcedPcSampling=0
+ForcedInterruptLogs=0
+ForcedItmLogs=0
+EventCPI=0
+EventEXC=0
+EventFOLD=0
+EventLSU=0
+EventSLEEP=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Bp0=_ 1 "EMUL_CODE" "{$PROJ_DIR$\main.c}.71.7" 0 0 1 "" 0 "" 0
+Count=1
+[Aliases]
+Count=0
+SuppressDialog=0

@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armJET.dll" 
+
+"C:\Analog Devices\ADuCM302x\ADuCM302x_EZ_Kit\examples\SD_CARD_SPI\Debug\Exe\sd_card_example.out" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\bin\armbat.dll" 
+
+--flash_loader "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\arm\config\flashloader\AnalogDevices\FlashADUCM3029.board" 
+
+
+
+
